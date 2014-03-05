@@ -14,4 +14,8 @@ $app->get('/', function () use ($app) {
     $app->render('index.html');
 });
 
+$app->get('/blog', function () use ($app) {
+    $app->render('blog.html');
+});
+
 $app->run();
