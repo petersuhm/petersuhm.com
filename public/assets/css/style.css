@@ -1,0 +1,17 @@
+a {
+    color: #777;
+}
+
+ul.link-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.date {
+    float: right;
+}
+
+.footer {
+    text-align: center;
+    padding-bottom: 40px;
+}
