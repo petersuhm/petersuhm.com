@@ -12,7 +12,6 @@
 {% block content %}
 {% for post in posts %}
     <h2 class="content-subhead" id="contact"><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h2>
-    <p class="post-meta">Published on {{ post.date | date("F j, Y") }}</p>
     <p>{{ post.excerpt }}</p>
     <p>
         <a href="/blog/{{ post.slug }}">Go to post &raquo;</a>

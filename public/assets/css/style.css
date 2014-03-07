@@ -1,3 +1,7 @@
+body {
+    color: #333;
+}
+
 h2, h3 {
     font-weight: 300;
 }
@@ -7,7 +11,11 @@ h2 > a {
 }
 
 a {
-    color: #777;
+    color: #4183c4;
+}
+
+h2 > a {
+    color: #333;
 }
 
 ul {
@@ -17,6 +25,23 @@ ul {
 ul.link-list {
     list-style: none;
     padding-left: 0;
+}
+
+pre {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+    background-color: #f8f8f8;
+}
+
+code {
+    font-size: 0.9em;
+}
+
+.content-subhead{
+    color: #333;
 }
 
 .date {

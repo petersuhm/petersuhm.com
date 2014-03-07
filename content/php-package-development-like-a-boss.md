@@ -12,6 +12,8 @@ I assume that you have basic knowledge about object-oriented PHP and test-driven
 * [PHPUnit](http://phpunit.de/)
 * [Composer](http://getcomposer.org/)
 
+You can find all the [code on Github](https://github.com/petersuhm/PHP-Package-Tutorial).
+
 Let's get started.
 
 ## Table of contents
@@ -567,5 +569,3 @@ Publishing a package on Packagist is super easy. Basically, all you have to do i
 It's a great feeling. Our package is finally on Packagist - ready for others to incorporate in their projects, but this is not the end. From now on, we have to keep making Guru better. Maybe we will get pull requests on Github from people who wants to help us improve the code. In our case, we should probably work on security and error handling, before we release next time. We should probably also include a file describing the license of our package. How about [MIT](http://opensource.org/licenses/MIT).
 
 Great open source projects, released trough Composer and Packagist, are leading a new era of modern PHP development. If you want to share parts of your code, it has never been easier. Thinking about putting your code in packages, even if you don't open source them and publish them, is a great way to design better applications. By structuring your code into more manageable chunks, your applications will become less complex and easier to maintain. It will also be easier for you to reuse your code in other projects. So go ahead. Make an awesome package and publish it for the World to use it!
-
-&copy; 2014 Copyright Peter Suhm
