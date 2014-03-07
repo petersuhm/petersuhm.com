@@ -4,7 +4,7 @@
     "excerpt": "In this article, we will look into the nuts and bolts of building a PHP package for Packagist. We will go through all the steps one by one and we will be using a test-driven approach with PHPUnit. PHP has been accused for many things during the years, but the community has really stepped up its game recently. With dependency management tools like Composer, we are able to build packages that can be easily used by others. We will be building a package ourselves, and our package will use and depend on other packages. We will build a small utlility for making a flat file CMS. Let's call it \"Guru\"."
 }
 
-In this article, we will look into the nuts and bolts of building a PHP package for [Packagist](https://packagist.org/). We will go through all the steps one by one and we will be using a test-driven approach with PHPUnit. PHP has been accused for many things during the years, but the community has really stepped up its game recently. With dependency management tools like Composer, we are able to build packages that can be easily used by others. We will be building a package ourselves, and our package will use and depend on other packages. We will build a small utlility for making a flat file CMS. Let's call it "Guru".
+In this article, we will look into the nuts and bolts of building a PHP package for [Packagist](https://packagist.org/). We will go through all the steps one by one and we will be using a test-driven approach with PHPUnit. PHP has been accused for many things during the years, but the community has really stepped up its game recently. With dependency management tools like Composer, we are able to build packages that can be easily used by others. We will be building a package ourselves, and our package will use and depend on other packages. We will build a small utility for making a flat file CMS. Let's call it "Guru".
 
 I assume that you have basic knowledge about object-oriented PHP and test-driven development. Otherwise, I encourage you to go through [this guide](http://www.phptherightway.com/). I also assume that you have the following things installed and configured:
 
@@ -110,7 +110,7 @@ Next file is `Guru.php`, which contains our `Guru` class. This class will be the
 class Guru {}
 ```
 
-Since we will be usen a test-driven approach, obviously we need a test for every class we make. So go ahead, and fill in the first test for our `Guru` class:
+Since we will be using a test-driven approach, obviously we need a test for every class we make. So go ahead, and fill in the first test for our `Guru` class:
 
 ```php
 # packages/guru/tests/GuruTest.php
@@ -320,7 +320,7 @@ public function testConfig()
 }
 ```
 
-Next step is to get a green test, so let´s implement the necessary code:
+Next step is to get a green test, so let's implement the necessary code:
 
 ```php
 # packages/guru/src/Petersuhm/Guru/Guru.php
@@ -339,7 +339,7 @@ And it's green.
 
 Okay, things are about to get serious. Can you feel it?
 
-Let's start by looking at the constructor. In order to ensure that our class is testable, we will inject our dependencies through the constructor. We need two things: a `\Kurenai\DocumentParser` instance and a post resolver. The post resolver will be used to resolve every `Post` object we might need. We will implement this using a [closure](http://php.net/closures). This is how the constuctor should look:
+Let's start by looking at the constructor. In order to ensure that our class is testable, we will inject our dependencies through the constructor. We need two things: a `\Kurenai\DocumentParser` instance and a post resolver. The post resolver will be used to resolve every `Post` object we might need. We will implement this using a [closure](http://php.net/closures). This is how the constructor should look:
 
 ```php
 # packages/guru/src/Petersuhm/Guru/Guru.php
@@ -362,7 +362,7 @@ public function __construct(DocumentParser $parser = null, $postResolver = null)
 
 This way, we are able to inject mocks and stubs into our class, should it be necessary.
 
-Speaking of which. Let's look at some testing. Since we will be using Mockery, we need to change our `GuruTest` a tiny bit. We also need to setup the dependencies that we will inject into the `Guru` class. For the `DocumentParser`, we will use a mock, so that we can set expectations, and for the post resolver, we will instantiate an object from a simple `PostStub` class that we will declare. We need to add the following code to our test:
+Speaking of which. Let's look at some testing. Since we will be using Mockery, we need to change our `GuruTest` a tiny bit. We also need to set up the dependencies that we will inject into the `Guru` class. For the `DocumentParser`, we will use a mock, so that we can set expectations, and for the post resolver, we will instantiate an object from a simple `PostStub` class that we will declare. We need to add the following code to our test:
 
 ```php
 # packages/guru/tests/GuruTest.php
@@ -543,7 +543,7 @@ foreach ($posts as $post)
 }
 ```
 
-Normally, we don't need to require the autoload file for a package, but since we aren´t using Composer in the root project, we need to require it manually. If we fetched the package from Packagist, Composer would take care of this. In order to see anything, you need to make a `content` directory and put some markdown files in it. You can reuse the ones you made for testing in `packages/guru/tests/fixtures`.
+Normally, we don't need to require the autoload file for a package, but since we aren't using Composer in the root project, we need to require it manually. If we fetched the package from Packagist, Composer would take care of this. In order to see anything, you need to make a `content` directory and put some markdown files in it. You can reuse the ones you made for testing in `packages/guru/tests/fixtures`.
 
 ## Going public {#going-public}
 
@@ -562,7 +562,7 @@ You can do this on Github as well, if you prefer to use their interface. Easy, r
 
 ### Publishing on Packagist {#publishing-on-packagist}
 
-Publishing a package on Packagist is super easy. Basically, all you have to do is to have the `composer.json` file present in your package's root directory (which we already have) and to put your package in a version control repository (like [Github](https://github.com/) or [BitBucket](https://bitbucket.org/)). When this is done, you can submit it on Packagist. I will not go trough the details here, but your can read more on their [website](https://packagist.org/about).
+Publishing a package on Packagist is super easy. Basically, all you have to do is to have the `composer.json` file present in your package's root directory (which we already have) and to put your package in a version control repository (like [Github](https://github.com/) or [BitBucket](https://bitbucket.org/)). When this is done, you can submit it on Packagist. I will not go through the details here, but your can read more on their [website](https://packagist.org/about).
 
 ## Wrapping it up {#wrapping-it-up}
 
