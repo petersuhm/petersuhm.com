@@ -10,28 +10,12 @@
 {% endblock %}
 
 {% block content %}
-    <h2 class="content-subhead" id="contact"><a href="#">A "Hello, World!" blog post</a></h2>
-    <p class="post-meta">Published on the 5th of March, 2014</p>
+{% for post in posts %}
+    <h2 class="content-subhead" id="contact"><a href="/blog/{{ post.slug }}">{{ post.title }}</a></h2>
+    <p class="post-meta">Published on {{ post.date | date("F j, Y") }}</p>
+    <p>{{ post.excerpt }}</p>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam <a href="#">rutrum</a> imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin posuere est eu neque ultrices, pharetra luctus dui convallis. Integer lacinia tellus in nisi mattis, quis lacinia justo sollicitudin. Integer eu semper odio, eget commodo dui. Vivamus hendrerit dolor eros. Donec justo dolor, tincidunt vel pretium vitae, vestibulum nec tortor. Nulla cursus gravida quam, in molestie sem varius at. Duis odio nibh, blandit in ligula sed, fermentum pellentesque risus. Nullam feugiat faucibus turpis, vitae suscipit turpis sagittis sed. In hac habitasse platea dictumst. Nunc rutrum gravida commodo. Cras sed ante rhoncus, mollis magna eleifend, cursus orci.
+        <a href="/blog/{{ post.slug }}">Go to post &raquo;</a>
     </p>
-    <p>
-        <a href="#">Go to post &raquo;</a>
-    </p>
-    <h2 class="content-subhead" id="contact"><a href="#">A "Hello, World!" blog post</a></h2>
-    <p class="post-meta">Published on the 5th of March, 2014</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam <a href="#">rutrum</a> imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin posuere est eu neque ultrices, pharetra luctus dui convallis. Integer lacinia tellus in nisi mattis, quis lacinia justo sollicitudin. Integer eu semper odio, eget commodo dui. Vivamus hendrerit dolor eros. Donec justo dolor, tincidunt vel pretium vitae, vestibulum nec tortor. Nulla cursus gravida quam, in molestie sem varius at. Duis odio nibh, blandit in ligula sed, fermentum pellentesque risus. Nullam feugiat faucibus turpis, vitae suscipit turpis sagittis sed. In hac habitasse platea dictumst. Nunc rutrum gravida commodo. Cras sed ante rhoncus, mollis magna eleifend, cursus orci.
-    </p>
-    <p>
-        <a href="#">Go to post &raquo;</a>
-    </p>
-    <h2 class="content-subhead" id="contact"><a href="#">A "Hello, World!" blog post</a></h2>
-    <p class="post-meta">Published on the 5th of March, 2014</p>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam <a href="#">rutrum</a> imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin posuere est eu neque ultrices, pharetra luctus dui convallis. Integer lacinia tellus in nisi mattis, quis lacinia justo sollicitudin. Integer eu semper odio, eget commodo dui. Vivamus hendrerit dolor eros. Donec justo dolor, tincidunt vel pretium vitae, vestibulum nec tortor. Nulla cursus gravida quam, in molestie sem varius at. Duis odio nibh, blandit in ligula sed, fermentum pellentesque risus. Nullam feugiat faucibus turpis, vitae suscipit turpis sagittis sed. In hac habitasse platea dictumst. Nunc rutrum gravida commodo. Cras sed ante rhoncus, mollis magna eleifend, cursus orci.
-    </p>
-    <p>
-        <a href="#">Go to post &raquo;</a>
-    </p>
+{% endfor %}
 {% endblock %}

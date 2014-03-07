@@ -13,3 +13,5 @@ This is a paragraph, and the next section is a PHP code block:
 
 class Hello {}
 ~~~
+
+### This one is an h3 one

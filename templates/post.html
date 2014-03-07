@@ -1,0 +1,18 @@
+{% extends "template.html" %}
+
+{% block description %}Blog ...{% endblock %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block header %}
+    <h1>{{ post.title }}</h1>
+    <h2>Blog by Peter Suhm</h2>
+{% endblock %}
+
+{% block content %}
+    <p class="post-meta">Published on {{ post.date | date("F j, Y") }}</p>
+    <p>{{ post.body | raw }}</p>
+    <p>
+        <a href="/blog">&laquo; Back</a>
+    </p>
+{% endblock %}
