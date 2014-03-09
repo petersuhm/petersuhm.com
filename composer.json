@@ -3,11 +3,6 @@
         "slim/slim": "2.*",
         "slim/views": "0.*",
         "twig/twig": "1.*",
-        "michelf/php-markdown": "1.4.*@dev"
-    },
-    "autoload": {
-        "psr-0": {
-            "Petersuhm\\Flat": "src/"
-        }
+        "petersuhm/thin": "dev-master"
     }
 }

@@ -2,16 +2,16 @@
 
 {% block description %}Blog ...{% endblock %}
 
-{% block title %}{{ post.title }}{% endblock %}
+{% block title %}{{ post.getMetadata('title') }}{% endblock %}
 
 {% block header %}
-    <h1>{{ post.title }}</h1>
+    <h1>{{ post.getMetadata('title') }}</h1>
     <h2>Blog by Peter Suhm</h2>
 {% endblock %}
 
 {% block content %}
-    <p>{{ post.body | raw }}</p>
-    <p><i>This article was published on {{ post.date | date("F j, Y") }}</i></p>
+    <p>{{ post.getHtmlContent() | raw }}</p>
+    <p><i>This article was published on {{ post.getMetadata('date') | date("F j, Y") }}</i></p>
     <p>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="petersuhm">Tweet</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>

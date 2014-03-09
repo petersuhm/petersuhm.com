@@ -13,7 +13,7 @@
     <h2 class="content-subhead" id="blog">Latest posts</h2>
     <ul class="link-list">
 {% for post in posts %}
-        <li><a href="/blog/{{ post.slug }}">{{ post.title }}</a></li>
+        <li><a href="/blog/{{ post.getSlug() }}">{{ post.getMetadata('title') }}</a></li>
 {% endfor %}
     </ul>
     <p>
