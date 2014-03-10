@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <p>{{ post.getHtmlContent() | raw }}</p>
+    <p>{{ post.getHtmlContent(parser) | raw }}</p>
     <p><i>This article was published on {{ post.getMetadata('date') | date("F j, Y") }}</i></p>
     <p>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="petersuhm">Tweet</a>

@@ -35,9 +35,9 @@ $app->get('/blog', function () use ($app, $postLoader)
 $app->get('/blog/:slug', function ($slug) use ($app, $postLoader)
 {
     $post = $postLoader->find($slug);
-    $post->parser = new \Thin\Parsers\MarkdownExtraParser;
+    $parser = new \Thin\Parsers\MarkdownExtraParser;
 
-    $app->render('post.html', array('post' => $post));
+    $app->render('post.html', array('post' => $post, 'parser' => $parser));
 });
 
 $app->run();
