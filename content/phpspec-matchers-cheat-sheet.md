@@ -4,7 +4,7 @@
     "excerpt": "This cheat sheet provides an overview of all the matchers that are supported by phpspec - including some that are currently not included in the documentation."
 }
 
-I want to [write a book about phpspec](https://leanpub.com/phpspec-getting-started), since there is not much documentation out there. Because of that, I am currently doing a lot of research an thought I would share some of it here.
+I want to [write a book about phpspec](https://leanpub.com/phpspec-getting-started), since there is not much documentation out there. Because of that, I am currently doing a lot of research and thought I would share some of it here.
 
 This cheat sheet provides an overview of all the matchers that [are supported by phpspec](http://phpspec.net/cookbook/matchers.html) - including some that are currently _not_ included in the documentation.
 
