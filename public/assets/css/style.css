@@ -54,6 +54,10 @@ code {
     line-height: 1;
 }
 
+.table-cheat-sheet tr {
+    vertical-align: top;
+}
+
 .footer {
     text-align: center;
     padding-bottom: 40px;
