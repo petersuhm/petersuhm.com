@@ -13,7 +13,9 @@
     <h2 class="content-subhead" id="blog">Latest posts</h2>
     <ul class="link-list">
 {% for post in posts %}
-        <li><a href="/blog/{{ post.getSlug() }}">{{ post.getMetadata('title') }}</a></li>
+        <li>
+            <a href="/blog/{{ post.getSlug() }}">{{ post.getMetadata('title') }}</a>
+        </li>
 {% endfor %}
     </ul>
     <p>
@@ -21,8 +23,18 @@
     </p>
     <h2 class="content-subhead" id="about">About</h2>
     <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer aliquam rutrum imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin posuere est eu neque ultrices, pharetra luctus dui convallis. Integer lacinia tellus in nisi mattis, quis lacinia justo sollicitudin. Integer eu semper odio, eget commodo dui. Vivamus hendrerit dolor eros. Donec justo dolor, tincidunt vel pretium vitae, vestibulum nec tortor. Nulla cursus gravida quam, in molestie sem varius at. Duis odio nibh, blandit in ligula sed, fermentum pellentesque risus. Nullam feugiat faucibus turpis, vitae suscipit turpis sagittis sed. In hac habitasse platea dictumst. Nunc rutrum gravida commodo. Cras sed ante rhoncus, mollis magna eleifend, cursus orci.
+        Hello! I'm Peter, a young Dane who loves building applications for the
+        web. I also love other things, <a href="http://abroadness.com">traveling</a>
+        for example.
     </p>
+    <p>If you wish, you can check out the following stuff:</p>
+    <ul>
+        <li>My <a href="https://github.com/petersuhm">code</a> on Github</li>
+        <li>My travel blog, <a href="http://abroadness.com">Abroadness.com</a> (next big trip in Sep. 2014!!!)</li>
+        <li>... including a (slightly photoshopped) <a href="http://abroadness.com/about">picture of me</a>!</li>
+        <li>The <a href="https://github.com/petersuhm/petersuhm.com">source code</a> of this website (If you happen to be a geek...)</li>
+        <li>My <a href="https://twitter.com/petersuhm">twitter account</a></li>
+    </ul>
     <h2 class="content-subhead" id="contact">Contact</h2>
     <p>
         If we need to get in touch, you are more than welcome to send me an
