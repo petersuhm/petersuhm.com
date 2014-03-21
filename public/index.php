@@ -12,29 +12,29 @@ $app->config(array(
 
 $app->view(new \Slim\Views\Twig());
 
-$postLoader = new \Thin\PostLoader;
-$postLoader->config(array(
+$app->postLoader = new \Thin\PostLoader;
+$app->postLoader->config(array(
     'document_path' => '../content',
     'document_ext' => '.md'
 ));
 
-$app->get('/', function () use ($app, $postLoader)
+$app->get('/', function () use ($app)
 {
-    $posts = $postLoader->all();
+    $posts = $app->postLoader->all();
 
     $app->render('index.html', array('posts' => $posts));
 });
 
-$app->get('/blog', function () use ($app, $postLoader)
+$app->get('/blog', function () use ($app)
 {
-    $posts = $postLoader->all();
+    $posts = $app->postLoader->all();
 
     $app->render('blog.html', array('posts' => $posts));
 });
 
-$app->get('/blog/:slug', function ($slug) use ($app, $postLoader)
+$app->get('/blog/:slug', function ($slug) use ($app)
 {
-    $post = $postLoader->find($slug);
+    $post = $app->postLoader->find($slug);
     $parser = new \Thin\Parsers\MarkdownExtraParser;
 
     $app->render('post.html', array('post' => $post, 'parser' => $parser));
