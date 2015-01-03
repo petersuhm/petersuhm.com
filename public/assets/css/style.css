@@ -1,64 +1,63 @@
 body {
-    color: #333;
+    background-color: #16a085;
+    color: #fff;
+    font-family: 'Lato', 'Helvetica', 'Arial';
 }
-
-h2, h3 {
-    font-weight: 300;
+h1, h2 {
+    font-family: 'Montserrat', 'Helvetica', 'Arial';
 }
-
-h2 > a {
-    text-decoration: none;
+a, a:active, a:hover {
+    color: #fff;
 }
-
-a {
-    color: #4183c4;
-}
-
-h2 > a {
-    color: #333;
-}
-
-ul {
-    margin: 0;
-}
-
-ul.link-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-pre {
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    overflow: auto;
-    word-wrap: normal;
-    white-space: pre;
-    background-color: #f8f8f8;
-}
-
-code {
-    font-size: 0.9em;
-}
-
-.content-subhead{
-    color: #333;
-}
-
-.date {
-    float: right;
-}
-
-.post-meta {
-    font-size: 90%;
-    color: #999;
-    line-height: 1;
-}
-
-.table-cheat-sheet tr {
-    vertical-align: top;
-}
-
-.footer {
+.really-large-text {
+    font-size: 70px;
+    margin-top: 160px;
     text-align: center;
-    padding-bottom: 40px;
+    text-shadow: 2px 2px 1px #333;
+}
+.hashtags {
+    font-size: 30px;
+    list-style: none;
+    margin-top: 60px;
+    padding-left: 0;
+    text-align: center;
+    text-shadow: 1px 1px .5px #333;
+}
+.hashtags.small {
+    font-size: 20px;
+    margin-top: 30px;
+}
+.hashtags > li {
+    display: inline;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.hashtags.small > li {
+    margin-left: 6px;
+    margin-right: 6px;
+}
+.icons {
+    list-style: none;
+    margin-top: 60px;
+    padding-left: 0;
+    text-align: center;
+    text-shadow: 1px 1px .5px #333;
+}
+.icons > li {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tweets {
+    margin-top: 40px;
+    text-align: center;
+}
+footer {
+    bottom: 0;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 20px 30px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
 }
